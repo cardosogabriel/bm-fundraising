@@ -1,0 +1,618 @@
+@import "../bootstrap-3.3.5/less/bootstrap.less";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700);
+
+@font-face {
+  font-family: samarkan;
+  src: url(/sites/default/files/website-page-assets/samarkan.ttf);
+}
+
+/*variables*/
+@c_link:        #1b75bc;
+@c_gray:        #404040;
+@c_gray_light:  #999999;
+@c_magenta:     #b42f70;
+@c_orange:      #f7941d;
+
+body {
+  background-color:#fcf9fb;
+  color:@c_gray;
+  font-family:"Avenir Next", Avenir, Lato, sans-serif;
+  font-size: 100%;
+}
+
+.fundraising-main {
+
+  .navbar-fixed-top {
+    background-color:rgba(255,255,255,0.9);
+    border-bottom:1px solid #d9ced3;
+    margin-bottom:0;
+    padding:1em 0;
+
+    .link {
+      color:@c_gray;
+      font-size:1.6em;
+      margin-top:5px;
+    }
+
+    .btn-sm {
+      border-radius: 6px;
+      font-size:1.4em;
+    }
+  }
+
+  .btn-primary {
+    background-color:#0e76bc;
+  }
+
+  .section {
+    text-align:center;
+    padding-bottom:8em;
+  }
+
+  .bg-img {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    padding-bottom:0;
+
+    &.temple-banner {
+      background-image:url(/sites/default/files/website-page-assets/temple-inside-render.jpg);
+      background-position: center center;
+      position:relative;
+
+      .text-content {
+        margin-top: 4em;
+      }
+    }
+
+    &.new-temple {
+      background-image:url(/sites/default/files/website-page-assets/bg-new-temple.jpg);
+      padding-bottom: 45em;
+    }
+  }
+
+  h1 {
+    color:white;
+    font-family:samarkan;
+    font-size:8.5em;
+    margin-top: 0;
+    text-shadow: 0 3px 5px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    color:white;
+    font-size:3em;
+    margin-top:0.6666666667em;
+    text-shadow: 0 3px 5px rgba(0,0,0,0.15);
+  }
+
+  h3 {
+    font-size:4.8em;
+    font-weight:normal;
+    line-height:1.2;
+    margin-bottom: 0.5em;
+    margin-top:1.55em;
+  }
+
+  p.description {
+    font-size:2em;
+    line-height:1.5;
+    margin-bottom:2.5em;
+
+    .read-more {
+      font-size:0.75em;
+    }
+
+    + p.description,
+    + p.link-icon {
+      margin-top: -1em;
+    }
+  }
+
+  blockquote {
+    border-left:none;
+    font-size:1em;
+    margin-bottom:0;
+    padding:0;
+
+    p {
+      color:@c_magenta;
+      font-size:3em;
+      line-height:1.2;
+      margin-bottom:0.5em;
+      position:relative;
+    }
+
+    .quotation-mark {
+      color:rgba(180,47,112,0.2);
+      font-family:Georgia, serif;
+      font-size:3.6em;
+      position:absolute;
+
+      &.open {
+        left:0;
+        top:0;
+      }
+     }
+
+    span {
+      color:@c_orange;
+      font-size:2.2em;
+      font-style:italic;
+    }
+  }
+
+  p + iframe {
+    margin-top: 1em;
+  }
+
+  .gurujis-vision {
+    padding-bottom:0;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+
+    .embed-responsive {
+      margin-bottom: 4em;
+    }
+
+    .img-gallery-thumbs {
+      margin-top: 3.5em;
+      position:relative;
+
+      .gallery-fade {
+        background:url(/sites/default/files/website-page-assets/thumbs-fade.png) repeat-x left -40px;
+        background-size:auto 118px;
+        height:118px;
+        position:absolute;
+        width:100%;
+      }
+
+      .thumb {
+        float:left;
+        width:calc(~"100% / 7");
+
+        a {
+          display:block;
+        }
+
+        img {
+          height:auto;
+          width:100%;
+        }
+      }
+    }
+  }
+
+  .progress-container {
+
+    margin-top: 2em;
+
+    p {
+      color:@c_gray_light;
+      font-size:2.4em;
+
+      .raised {
+        color:@c_magenta;
+        font-size:2em;
+      }
+    }
+
+    .progress {
+      background-color:#d3d5d9;
+      border-radius:10px;
+      box-shadow:none;
+    }
+
+    .progress-bar {
+      background-color:@c_magenta;
+      border-radius:10px;
+    }
+
+    p + .btn {
+      margin-top: 0.75em;
+    }
+  }
+
+  .donators {
+    color:@c_gray_light;
+    font-size: 1.4em;
+    line-height:1.5;
+    margin-top:4.3em;
+  }
+
+  .last-update {
+    color:@c_gray;
+    font-size:1.4em;
+    margin-top:1.6666666667em;
+  }
+
+  .btn-lg {
+    font-size:3.6em;
+    padding:18px;
+    min-width:450px;
+  }
+
+  .bm-timeline {
+    padding-bottom: 0;
+
+    .panel-group {
+      margin-top: 3em;
+    }
+
+    .row {
+      @media (min-width: @screen-sm-min) {
+        display: flex;
+      }
+    }
+
+    .col-lg-4:first-child {
+
+      @media (min-width: @screen-sm-min) {
+        border-right: 1px solid #d3d5d9;
+      }
+    }
+
+    h4 {
+      font-size: 2.4em;
+      text-align: right;
+      margin-bottom: 0.75em;
+      padding-right: 0.4166666667em;
+      padding-top: 0.8333333333em;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        background-color: rgba(164, 59, 128, 0.5);
+        position: absolute;
+        right: -16px;
+        top: 15px;
+      }
+    }
+
+    .bm-img-container {
+      margin-bottom: 2em;
+      text-align: left;
+      padding-left: 1em;
+    }
+  }
+
+  p.bm-timeline__description {
+    font-size: 1.8em;
+    line-height: 1.5;
+    margin-bottom: 0.75em;
+    text-align: justify;
+    padding-right: 0.5555555556em;
+  }
+
+  .img-blockquote {
+    background-image: url(/sites/default/files/website-page-assets/deity-names-side.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: auto 100%;
+  }
+
+  .donate {
+    background-color: #f0f2f8;
+
+    .progress-container { margin-top: 6em; }
+
+    .donation-steps-info {
+      color: @c_gray_light;
+      font-size: 1.2em;
+      margin-top:1.6666666667em;
+    }
+  }
+
+  ul.deities {
+
+    margin-bottom:3em;
+
+    li {
+      float:left;
+      margin-bottom: 2em;
+      width: calc(~"100% / 6");
+
+      &.main {
+        float:none;
+        margin-bottom: 4em;
+        width:100%;
+      }
+
+      img {
+        border-radius:50%;
+        box-shadow: 0 3px 3px rgba(0,0,0,0.15);
+      }
+
+      p {
+        font-size:1.6em;
+        font-style:italic;
+        margin-top:0.625em;
+      }
+    }
+  }
+
+  .thank-you {
+    background-color: #f8eff4;
+  }
+
+  .link-icon {
+    font-size:1.8em;
+
+    + .link-icon {
+      margin-top: 1.6666666667em;
+    }
+  }
+}
+
+/* Modal */
+
+.modal-header {
+  h4 {
+    margin-top: 15px;
+  }
+}
+
+.modal-body {
+  font-size: 1.6em;
+  line-height: 1.5;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+/*Responsive Styles*/
+
+@media (min-width: @screen-lg-min) { /* 1200px */
+
+  .fundraising-main {
+    .bg-img.temple-banner {
+
+      min-height: 618px;
+
+      .container {
+        left: calc(~"50% - 585px");
+        margin-top: 7em;
+        position:absolute;
+        z-index:0;
+      }
+
+      img {
+        width:100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .fundraising-main .bg-img.temple-banner {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: @screen-md-max) { /* 1199px */
+
+  .fundraising-main {
+    .bg-img {
+      &.temple-banner {
+        background-size: 1200px auto;
+        height: 618px;
+
+        .text-content {
+          font-size: 0.88em;
+          margin-top: 10em;
+        }
+
+        img {
+          display:none;
+        }
+      }
+
+      &.new-temple {
+        background-size: 1200px auto;
+        padding-bottom: 40em;
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) { /* 991px */
+  .fundraising-main {
+    .bg-img {
+      &.temple-banner {
+        background-size: 992px auto;
+        height: 482px;
+
+        .text-content {
+          font-size: 0.72em;
+          margin-top: 10em;
+        }
+      }
+
+      &.new-temple {
+        background-size: 992px auto;
+        padding-bottom: 32em;
+      }
+    }
+
+    .have-your-name .img-blockquote {
+      background-image: url(/sites/default/files/website-page-assets/deity-names.jpg);
+      background-size: 992px auto;
+      padding-bottom: 50em;
+      background-position: center bottom;
+
+       blockquote {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    ul.deities li {
+      width: calc(~"100% / 3");
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) { /* 767px */
+  .fundraising-main {
+    .section {
+      &.new-temple,
+      &.gurujis-vision,
+      &.bm-timeline,
+      &.have-your-name,
+      &.donate,
+      &.sponsor,
+      &.thank-you {
+        font-size: 0.8em;
+      }
+    }
+
+    .bg-img {
+      &.temple-banner {
+        background-size: 769px auto;
+        height: 396px;
+
+        .text-content {
+          font-size: 0.58em;
+          margin-top: 6em;
+        }
+      }
+
+      &.new-temple {
+        background-size: 768px auto;
+      }
+    }
+
+    .bm-timeline {
+
+      .row {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .col-lg-4 {
+        border-left: 1px solid #d3d5d9;
+      }
+
+      h4 {
+        text-align: center;
+
+        &::before {
+          left: -12px;
+          width: 24px;
+          height: 24px;
+          border-radius: 24px;
+          top: 13px;
+        }
+      }
+
+      .bm-img-container {
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    p.bm-timeline__description {
+      text-align: center;
+      padding: 0 10px;
+
+      &:last-child {
+        padding-bottom: 5px;
+      }
+    }
+
+    .have-your-name .img-blockquote {
+      background-size: 768px auto;
+      padding-bottom: 47em;
+      background-position: center bottom;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .fundraising-main {
+
+    .navbar-fixed-top .link {
+      display:none;
+    }
+
+    .bg-img {
+
+      &.temple-banner {
+
+       .text-content {
+          font-size: 0.45em;
+          margin-top: 11em;
+
+          h1 {
+            font-size: 7.6em;
+          }
+        }
+      }
+
+      &.new-temple {
+        background-size: 600px auto;
+        padding-bottom: 25em;
+      }
+    }
+
+    h3 {
+      font-size: 4em;
+      margin-top: 1.2em;
+    }
+
+    blockquote {
+      p {
+        font-size: 2.6em;
+      }
+
+      span {
+        font-size: 1.9em;
+      }
+    }
+
+    .gurujis-vision .img-gallery-thumbs {
+
+        .gallery-fade {
+          background-size: auto 90px;
+          background-position: left -30px;
+        }
+
+        .thumb {
+        width: calc(~"100% / 4");
+
+        &:nth-child(2),
+        &:nth-child(7),
+        &:nth-child(8) {
+          display: none;
+        }
+      }
+    }
+
+    .have-your-name .img-blockquote {
+      background-size: 480px auto;
+      padding-bottom: 30em;
+    }
+
+    ul.deities li {
+      width: calc(~"100% / 2");
+    }
+
+    .btn-lg {
+      font-size: 3em;
+      min-width: 0;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/*Bhakti Marga Theme overwrite*/
+#skip-link {
+  display: none;
+}
+/*variables*/
+body {
+  background-color: #fcf9fb!important;
+  background-image: none!important;
+  color: #404040!important;
+  font-family: "Avenir Next", Avenir, Lato, sans-serif !important;
+  font-size: 10px!important;
+  padding-top: 54px!important;
+}
+.fundraising-main h1 {
+  font-weight: normal;
+}
+.fundraising-main h2,
+.fundraising-main h3,
+.fundraising-main h4 {
+  font-family: "Avenir Next", Avenir, Lato, sans-serif !important;
+  font-weight: 400;
+}
+.fundraising-main h3 {
+  color: #404040;
+}
+.fundraising-main p {
+  text-align: center;
+}
+.fundraising-main .btn {
+  font-weight: normal;
+}
+body #footer {
+  font-size: 14px!important;
+}
+.modal-header {
+  border-bottom: none!important;
+}
+.modal-header h4 {
+  color: #404040;
+  font-family: 'Avenir Next', Avenir, Lato, sans-serif;
+  font-size: 1.8em;
+}
