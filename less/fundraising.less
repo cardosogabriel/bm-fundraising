@@ -1,6 +1,4 @@
-@import "../bootstrap-3.3.5/less/bootstrap.less";
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700);
+@import "../bootstrap-3.3.5/less/variables.less";
 
 @font-face {
   font-family: samarkan;
@@ -8,11 +6,10 @@
 }
 
 /*variables*/
-@c_link:        #1b75bc;
-@c_gray:        #404040;
-@c_gray_light:  #999999;
+@c_link:        #0d87e9;
+@c_gray:        #333333;
+@c_gray_light:  #888888;
 @c_magenta:     #b42f70;
-@c_orange:      #f7941d;
 
 body {
   background-color:#fcf9fb;
@@ -34,11 +31,6 @@ body {
       font-size:1.6em;
       margin-top:5px;
     }
-
-    .btn-sm {
-      border-radius: 6px;
-      font-size:1.4em;
-    }
   }
 
   .btn-primary {
@@ -46,7 +38,6 @@ body {
   }
 
   .section {
-    text-align:center;
     padding-bottom:8em;
   }
 
@@ -61,6 +52,7 @@ body {
       background-image:url(/sites/default/files/website-page-assets/temple-inside-render.jpg);
       background-position: center center;
       position:relative;
+      text-align: center;
 
       .text-content {
         margin-top: 4em;
@@ -77,6 +69,7 @@ body {
     color:white;
     font-family:samarkan;
     font-size:8.5em;
+    margin-bottom: 10px;
     margin-top: 0;
     text-shadow: 0 3px 5px rgba(0,0,0,0.15);
   }
@@ -86,6 +79,9 @@ body {
     font-size:3em;
     margin-top:0.6666666667em;
     text-shadow: 0 3px 5px rgba(0,0,0,0.15);
+    @media (max-width:@screen-xs-max) {
+      font-size: 18px;
+    }
   }
 
   h3 {
@@ -100,6 +96,7 @@ body {
     font-size:2em;
     line-height:1.5;
     margin-bottom:2.5em;
+    text-align: left;
 
     .read-more {
       font-size:0.75em;
@@ -112,35 +109,11 @@ body {
   }
 
   blockquote {
-    border-left:none;
-    font-size:1em;
     margin-bottom:0;
-    padding:0;
 
     p {
-      color:@c_magenta;
-      font-size:3em;
-      line-height:1.2;
-      margin-bottom:0.5em;
       position:relative;
-    }
-
-    .quotation-mark {
-      color:rgba(180,47,112,0.2);
-      font-family:Georgia, serif;
-      font-size:3.6em;
-      position:absolute;
-
-      &.open {
-        left:0;
-        top:0;
-      }
-     }
-
-    span {
-      color:@c_orange;
-      font-size:2.2em;
-      font-style:italic;
+      text-align: left;
     }
   }
 
@@ -302,7 +275,7 @@ body {
 
     .donation-steps-info {
       color: @c_gray_light;
-      font-size: 1.2em;
+      font-size: 1.4em;
       margin-top:1.6666666667em;
     }
   }
