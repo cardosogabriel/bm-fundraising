@@ -1,0 +1,15 @@
+# Folders to ignore
+bootstrap-3.3.5
+
+# Numerous always-ignore extensions
+*.DS_Store
+
+css/Icon
+
+fonts/Icon
+
+img/Icon
+
+js/Icon
+
+less/Icon
