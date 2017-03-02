@@ -92,7 +92,7 @@ body {
     margin-top:1.55em;
   }
 
-  p.description {
+  .description {
     font-size:2em;
     line-height:1.5;
     margin-bottom:2.5em;
@@ -102,9 +102,13 @@ body {
       font-size:0.75em;
     }
 
-    + p.description,
-    + p.link-icon {
+    + .description,
+    + .link-icon {
       margin-top: -1em;
+    }
+
+    li + li {
+      margin-top: .6em;
     }
   }
 
@@ -161,11 +165,11 @@ body {
 
     margin-top: 2em;
 
-    p {
+    .raised {
       color:@c_gray_light;
       font-size:2.4em;
 
-      .raised {
+      span {
         color:@c_magenta;
         font-size:2em;
       }
@@ -184,6 +188,12 @@ body {
 
     p + .btn {
       margin-top: 0.75em;
+      margin-bottom: .5em;
+    }
+
+    .btn-link {
+      font-size: 2.2em;
+      text-transform: uppercase;
     }
   }
 
@@ -278,6 +288,10 @@ body {
       font-size: 1.4em;
       margin-top:1.6666666667em;
     }
+
+    .description:last-child {
+      margin-bottom: 0;
+    }
   }
 
   ul.deities {
@@ -319,15 +333,27 @@ body {
       margin-top: 1.6666666667em;
     }
   }
+
+  #bank-info {
+    padding-top: 5em;
+    margin-top: -2em;
+
+    .bank-options {
+       margin-top: -2.5em;
+       margin-bottom: 0;
+    }
+
+    .bank-info {
+      font-size: 1.8em;
+
+      + .bank-info {
+        margin-top: 1em;
+      }
+    }
+  }
 }
 
 /* Modal */
-
-.modal-header {
-  h4 {
-    margin-top: 15px;
-  }
-}
 
 .modal-body {
   font-size: 1.6em;

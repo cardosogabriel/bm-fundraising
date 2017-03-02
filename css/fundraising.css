@@ -72,18 +72,21 @@ body {
   margin-bottom: 0.5em;
   margin-top: 1.55em;
 }
-.fundraising-main p.description {
+.fundraising-main .description {
   font-size: 2em;
   line-height: 1.5;
   margin-bottom: 2.5em;
   text-align: left;
 }
-.fundraising-main p.description .read-more {
+.fundraising-main .description .read-more {
   font-size: 0.75em;
 }
-.fundraising-main p.description + p.description,
-.fundraising-main p.description + p.link-icon {
+.fundraising-main .description + .description,
+.fundraising-main .description + .link-icon {
   margin-top: -1em;
+}
+.fundraising-main .description li + li {
+  margin-top: .6em;
 }
 .fundraising-main blockquote {
   margin-bottom: 0;
@@ -127,11 +130,11 @@ body {
 .fundraising-main .progress-container {
   margin-top: 2em;
 }
-.fundraising-main .progress-container p {
+.fundraising-main .progress-container .raised {
   color: #888888;
   font-size: 2.4em;
 }
-.fundraising-main .progress-container p .raised {
+.fundraising-main .progress-container .raised span {
   color: #b42f70;
   font-size: 2em;
 }
@@ -146,6 +149,11 @@ body {
 }
 .fundraising-main .progress-container p + .btn {
   margin-top: 0.75em;
+  margin-bottom: .5em;
+}
+.fundraising-main .progress-container .btn-link {
+  font-size: 2.2em;
+  text-transform: uppercase;
 }
 .fundraising-main .donators {
   color: #888888;
@@ -226,6 +234,9 @@ body {
   font-size: 1.4em;
   margin-top: 1.6666666667em;
 }
+.fundraising-main .donate .description:last-child {
+  margin-bottom: 0;
+}
 .fundraising-main ul.deities {
   margin-bottom: 3em;
 }
@@ -257,10 +268,21 @@ body {
 .fundraising-main .link-icon + .link-icon {
   margin-top: 1.6666666667em;
 }
-/* Modal */
-.modal-header h4 {
-  margin-top: 15px;
+.fundraising-main #bank-info {
+  padding-top: 5em;
+  margin-top: -2em;
 }
+.fundraising-main #bank-info .bank-options {
+  margin-top: -2.5em;
+  margin-bottom: 0;
+}
+.fundraising-main #bank-info .bank-info {
+  font-size: 1.8em;
+}
+.fundraising-main #bank-info .bank-info + .bank-info {
+  margin-top: 1em;
+}
+/* Modal */
 .modal-body {
   font-size: 1.6em;
   line-height: 1.5;
